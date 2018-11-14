@@ -9,12 +9,11 @@ function high(sentence){
       wordTotal = 0;
       for(let j = 0; j < wordChar[i].length; j++){
         wordTotal +=ALPHABET.search(wordChar[i][j]);
-      } //end of WORD
+      }
       if(wordTotal > highestWordTotal){
         longestWord = words[i];
         highestWordTotal = wordTotal;
       }
-      console.log(wordTotal);
     }
     return longestWord;
   }
