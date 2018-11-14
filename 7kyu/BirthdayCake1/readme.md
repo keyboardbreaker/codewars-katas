@@ -14,3 +14,7 @@ example: 'abc' --> a=97, b=2, c=99 --> y total = 198.
 
 If the carpet catches fire, return 'Fire!', if not, return 'That was close!'.
 
+# Useful Links:
+[Get ASCII value of Character](https://www.hacksparrow.com/get-ascii-value-of-character-convert-ascii-to-character-in-javascript.html)
+
+[ASCII Table](http://www.asciitable.com/)
