@@ -6,7 +6,7 @@ function high(sentence){
     let highestWordTotal = 0;
     
     for(let i = 0; i < wordChar.length; i++) {
-        wordTotal = 0;
+        let wordTotal = 0;
         for(let j = 0; j < wordChar[i].length; j++) {
             wordTotal += ALPHABET.search(wordChar[i][j]);
         }
