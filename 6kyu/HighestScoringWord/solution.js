@@ -5,15 +5,15 @@ function high(sentence){
     let longestWord = "";
     let highestWordTotal = 0;
     
-    for(let i = 0; i < wordChar.length; i++){
-      wordTotal = 0;
-      for(let j = 0; j < wordChar[i].length; j++){
-        wordTotal +=ALPHABET.search(wordChar[i][j]);
-      }
-      if(wordTotal > highestWordTotal){
-        longestWord = words[i];
-        highestWordTotal = wordTotal;
-      }
+    for(let i = 0; i < wordChar.length; i++) {
+        wordTotal = 0;
+        for(let j = 0; j < wordChar[i].length; j++) {
+            wordTotal += ALPHABET.search(wordChar[i][j]);
+        }
+        if(wordTotal > highestWordTotal) {
+            longestWord = words[i];
+            highestWordTotal = wordTotal;
+        }
     }
     return longestWord;
-  }
+}
