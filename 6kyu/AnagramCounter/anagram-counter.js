@@ -11,33 +11,34 @@
   10. finish the loop when we reach the last item in the array
   11. return number of found anagrams
 */
-function anagramCounter (wordsArray) {
+function anagramCounter (wordsArray) {// abc, cba, bac
     let totalFound = 0;
     let currentWord = "";
-    
+
     for(let i = 0; i < wordsArray.length; i++) {
       currentWord = wordsArray[i];
-      let nextWord = "";
-      if(i < wordsArray.length - 1) { //if not last word
-        nextWord = wordsArray[i + 1];
-      }
-      if(nextWord !== "" && currentWord.length === nextWord.length) {
-        let firstWord =currentWord
+      for(let j = 0; j < wordsArray.length; j++) {
+        let nextWord = wordsArray[j];
+        if(i === j || nextWord.length !== currentWord.length) { 
+          continue; 
+        }
+        else {
+          let firstWord = currentWord
             .toLowerCase()
             .split('')
             .sort((a, b) => a.localeCompare(b))
             .join();
-        let secondWord = nextWord
+          let secondWord = nextWord
             .toLowerCase()
             .split('')
             .sort((a, b) => a.localeCompare(b))
             .join();
-        let isAnagram = firstWord === secondWord;
-        if(isAnagram) {
-          totalFound++;
+          let isAnagram = firstWord === secondWord;
+          if(isAnagram) {
+            totalFound++;
+          }
         }
       }
     }
-  
-    return totalFound;
+    return totalFound / 2; // removing pairs ie, [abc, cba], [cba, abc]
   }
